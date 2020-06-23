@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:h.="http://java.sun.com/jsf/html">
+<h:head>
+    <h:outputStylesheet library="CSS" name="PagesCSS.css" />
+    <title>Yifeng.Project</title>
+    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+<!--    <link rel="import" href="resources/CSS/footerCSS.css"/>-->
+    <script type="text/javascript">
+        $(function(){
+
+        })
+    </script>
+</h:head>
+<h:body>
+
+    <iframe   src="navigation_bar.jsp" width="100%" height="auto" frameborder="0" name="bar" scrolling="no">
+    </iframe>
+    <br style="margin-bottom: 10px"/>
+    <h1 style="margin-left: 10%">Projects I am involved in:</h1>
+    <div class="bigBox clickToLoad" id="1">
+        <h:form style="width: 90%; height:90%" >
+            <div class="detailBox pTitle">#{projectList.projectArrayList[0].title}</div><br/>
+            <div class="detailBox pSummary"><span>#{projectList.projectArrayList[0].summary}</span></div><br/>
+            <div class="detailBox pDesc"><span>#{projectList.projectArrayList[0].desc} </span></div><br/>
+            <div class="detailBox pType">#{projectList.projectArrayList[0].type}</div><br/>
+            <div class="detailBox pHyperlink"><a href="">#{projectList.projectArrayList[0].hyperLink}</a></div>
+        </h:form>
+    </div>
+
+    <div class="bigBox clickToLoad" id="2">
+        <h:form style="width: 90%; height:90%" >
+            <div class="detailBox pTitle">#{projectList.projectArrayList[1].title}</div><br/>
+            <div class="detailBox pSummary"><span>#{projectList.projectArrayList[1].summary}</span></div><br/>
+            <div class="detailBox pDesc"><span>#{projectList.projectArrayList[1].desc} </span></div><br/>
+            <div class="detailBox pType">#{projectList.projectArrayList[1].type}</div><br/>
+            <div class="detailBox pHyperlink"><a href="#{projectList.projectArrayList[1].hyperLink}">#{projectList.projectArrayList[1].hyperLink}</a></div>
+        </h:form>
+<!--        <div><span>Click to load this project.</span></div>-->
+        <!--    第二个项目-->
+        <!--    <div class="detailBox pTitle"><span>MotionFlow</span></div><br>-->
+        <!--    <div class="detailBox pSummary"><span>An arduino related project.</span></div><br>-->
+        <!--    <div class="detailBox pDesc"><span>This project created a boxing glove, which has LEDs on its surface and a accelerometer inside when the logic models detect punch, the LED matrix display animation.  </span></div><br>-->
+        <!--    <div class="detailBox pType">Using Arduino technology.</div><br>-->
+        <!--    <div class="detailBox pHyperlink"><a href="https://github.com/YIFENGSCOTT/MotionFlow">Github Link...</a></div>-->
+    </div>
+    <div class="bigBox clickToLoad" id="3">
+        <h:form style="width: 90%; height:90%" >
+            <div class="detailBox pTitle">#{projectList.projectArrayList[2].title}</div><br/>
+            <div class="detailBox pSummary"><span>#{projectList.projectArrayList[2].summary}</span></div><br/>
+            <div class="detailBox pDesc"><span>#{projectList.projectArrayList[2].desc} </span></div><br/>
+            <div class="detailBox pType">#{projectList.projectArrayList[2].type}</div><br/>
+            <div class="detailBox pHyperlink"><a href="#{projectList.projectArrayList[2].hyperLink}">#{projectList.projectArrayList[1].hyperLink}</a></div>
+        </h:form>
+    </div>
+    <!--<div class="bigBox clickToLoad" id="loadTarget">-->
+    <!--    <div><span>Click to load more projects.</span></div>-->
+    <!--</div>-->
+
+    <div>
+        <h.:form>
+            <h.:commandButton value="Something's wrong?" action="#{entry.goToEdit}" style="margin-left: 20%; width: 60%; margin-bottom: 20%"></h.:commandButton>
+        </h.:form>
+    </div>
+
+
+
+    <iframe class="footerFrame" src="footer.jsp" width="100%" height="auto" frameborder="0" name="bar" scrolling="no">
+    </iframe>
+</h:body>
+
+
+</html>

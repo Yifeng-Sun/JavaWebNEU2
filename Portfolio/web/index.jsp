@@ -38,7 +38,7 @@
     <span class="item text" id="homepage">portfolio. </span>
   </div>
   <div class="box">
-    <a href="html/real_homepage.html"><span class="text enter" id="enter">ENTER>></span></a>
+    <a href="tutorial4/real_homepage.jsp"><span class="text enter" id="enter">ENTER>></span></a>
   </div>
 
 <%--  <h1 id="this_is">This is </h1>--%>

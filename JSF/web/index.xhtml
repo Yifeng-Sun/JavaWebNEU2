@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+   <h:outputStylesheet library="CSS" name="indexCSS.css" />
+   <title>Yifeng.homepage</title>
+   <script type="text/javascript" src="jquery-3.4.1.js"></script>
+   <script type="text/javascript">
+      $(function(){
+         // var head = document.getElementById("profile_photo");
+         // alert(head);
+         $(ch_name).hide();
+         $("#enter").bind("mouseover mouseout", function(event){
+            if(event.type === "mouseover"){
+               $(en_name).hide();
+               $(ch_name).show();
+            }
+            else {
+               $(en_name).show();
+               $(ch_name).hide();
+            }
+         })
+      })
+   </script>
+</h:head>
+<h:body>
+<!--   <f:view>-->
+<!--      <h:outputLabel value="Hello, world"/>-->
+<!--   </f:view>-->
+<!--   <f:view styleClass="box longString">-->
+   <h:panelGroup styleClass="box longString">
+      <span class="item text" id="this_is">This is </span>
+      <span class="item text" id="en_name">Yifeng's </span>
+      <span class="item text" id="ch_name">孙一峰的 </span>
+      <span class="item text" id="homepage">portfolio. </span>
+   </h:panelGroup>
+<!--   </f:view>-->
+   <div class="box">
+      <h:form>
+      <h:commandButton value="Enter>>"
+      action="#{entry.goToHomepage}"/>
+      </h:form>
+   </div>
+</h:body>
+
+
+</html>
